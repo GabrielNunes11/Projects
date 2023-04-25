@@ -9,15 +9,17 @@ Projetos criados ao longo do curso de Desenvolvimento Full Stack do Firjan/Senai
 ##	Sumário
 ####	Os arquivos contidos nesse repositório estão separados de acordo com o nome da matéria, e cada um deles tem o seu ReadMe individual para melhor entendimento do visitante. 
 ####	*Cada ReadMe contém os devidos créditos ao meus parceiros de grupo e desenvolvimento.
-<br></br>
-#### Desenvolvimento:
-<br>
-<a href="https://github.com/GabrielNunes11">Gabriel Nunes</a>
-<br>
-#### Professores:
-<br>
-<a href="https://github.com/DebySouza/">Déby Souza</a>
-<br>
+
+<h1 align="center"> Desenvolvedores do Projeto: </h1> 
+  
+[Gabriel Nunes](https://github.com/GabrielNunes11/)  
+</h1>
+
+<h1 align="center"> Professora: </h1> 
+
+[Débora Souza](https://github.com/DebySouza/)
+
+</h1>
 
 ###	English:
 
@@ -32,10 +34,13 @@ Projects created throughout the Full Stack Development course at Firjan/Senai wi
 ####	Files contained in this repository are separated according to the name of each subject, and each file has your ReadMe for a better understanding by the visitor.
 ####	* Each ReadMe contains the proper credits to my group partners and development.
 
-<br></br>
-#### Desenvolvimento:
-<br>
-<a href="https://github.com/GabrielNunes11">Gabriel Nunes</a>
-<br>
-#### Professores:
-<a href="https://github.com/DebySouza/">Déby Souza</a>
+<h1 align="center"> Developer: </h1> 
+  
+[Gabriel Nunes](https://github.com/GabrielNunes11/)  
+</h1>
+
+<h1 align="center"> Teacher: </h1> 
+
+[Débora Souza](https://github.com/DebySouza/)
+
+</h1>
