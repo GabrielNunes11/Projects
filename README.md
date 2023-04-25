@@ -1,3 +1,4 @@
+### Português:
 ## Residência - Serratec - Firjan/Senai
 #### Projetos Finais
 ## Sobre
@@ -14,11 +15,13 @@ Projetos criados ao longo do curso de Desenvolvimento Full Stack do Firjan/Senai
 <a href="https://github.com/GabrielNunes11">Gabriel Nunes</a>
 <br>
 #### Professores:
+<br>
 <a href="https://github.com/DebySouza/">Déby Souza</a>
+<br>
 
 ###	English:
 
-## Residência - Serratec - Firjan/Senai
+## Residence - Serratec - Firjan/Senai
 #### Final Projects
 ## About
 Projects created throughout the Full Stack Development course at Firjan/Senai with SERRATEC.
