@@ -1,0 +1,454 @@
+:root {
+  --cor1: #342c82;
+  --cor2: #eaeaec;
+  --cor3: #afc8df;
+  --cor4: #75a6d2;
+  --cor5: #3b84c5;
+}
+
+body {
+  overflow-x: hidden;
+  overflow-y: hidden;
+  background: #eaeaec;
+}
+
+header {
+  z-index: 1;
+  display: flex;
+  position: fixed;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  transition: all 2s ease-in-out;
+  background-color: #342c82;
+}
+
+.iconescabeca {
+  margin-left: 2%;
+  margin-right: 2%;
+  height: 80%;
+  width: 4%;
+  cursor: pointer;
+  color: #afc8df;
+  transition: transform 4s ease-in-out;
+}
+
+.iconescabeca:hover {
+  color: #eaeaec;
+}
+
+.iconeconta {
+  width: 3%;
+  transform: translate(50vw, 0);
+}
+
+#iconeburge {
+  margin-left: 1.28%;
+  transform: translate(-20vw, 0);
+}
+
+header img {
+  height: 40%;
+  transition: all 2s ease-in-out;
+  cursor: pointer;
+}
+
+.caixas-barra-lateral{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  height: 50px;
+  border: 10px;
+  border-color: #afc8df;
+  border-bottom: 50px;
+}
+
+.caixas-barra-lateral:hover{
+    background-color: #342c82;
+    color: #eaeaec;
+}
+
+#barra-lateral{
+  display: flex;
+  flex-direction: column;
+  top: 50px;
+  height: 100%;
+  width: 251px;
+  transform: translateX(-251px);
+  z-index: 1;
+  position: fixed;
+  background-image: linear-gradient(to bottom, #75a6d2, #352c8200);
+  transition: all 0.5s ease-in-out;
+}
+
+#conta-caixa{
+  height: 200px;
+  width: 300px;
+  left: 80%;
+  top: 50px;
+  display: flex;
+  flex-direction: column;
+  z-index: -1;
+  position: fixed;
+  border-radius:0px 0px 50px 50px ;
+  background-color: #75a6d2;
+}
+
+.topo-conta-caixa{
+  display: flex;
+  flex-direction: row;
+  height: 30%;
+  width: 100%;
+}
+
+.topo-conta-texto{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 0.75vw;
+  margin-top: 4vh;
+}
+
+#conta-opcoes{
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+}
+
+.conta-opcoes-botoes{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  height: 8vh;
+  cursor: pointer;
+}
+
+.conta-opcoes-botoes:hover{
+ color: #eaeaec;
+ background-color: #342c82;
+ border-radius: 0px 0px 5px 20px;
+}
+
+#conta-icone{
+   height: 100%;
+   width: 15%;
+   margin-left: 3%;
+}
+
+.carousel-control-prev, .carousel-control-next{
+  top: 50px;
+  z-index: 0;
+}
+
+.carrosel {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  width: 100%;
+  height: 742px;
+  background-color: #75a6d2;
+}
+
+.carrosel img {
+  margin-top: 50px;
+  width: 50%;
+  height: 692px;
+}
+
+.sombra {
+  position: absolute;
+  opacity: 100;
+}
+
+.carrosel p {
+  position: absolute;
+  align-self: flex-start;
+  margin-bottom: 20px;
+  margin-left: 30px;
+  font-size: 70px;
+  cursor: pointer;
+  color: #eaeaec;
+}
+
+.carrosel p:hover {
+  text-decoration: underline;
+}
+
+#carouselExampleCaptions .carousel-inner .carousel-item img {
+  width: 100%;
+  height: 100vh;
+}
+
+.carousel-caption {
+  bottom: 18vh;
+}
+/* 
+.carousel-inner .carousel-item > img{
+  -webkit-animation: zoom 9s;
+  -o-animation: zoom 9s;
+  animation: zoom 9s;
+}
+
+>>>>>>> gabriel
+@keyframes zoom {
+  from {
+      transform: scale(1, 1);
+  }
+  to{
+      transform: scale(1.5, 1.5);
+  }
+} */
+
+.seta-container {
+  display: flex;
+  position: absolute;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+  height: 15vh;
+}
+
+.setinha {
+  position: absolute;
+  align-self: center;
+  height: 25vh;
+  width: 6vw;
+  color: #eaeaecba;
+  cursor: pointer;
+}
+
+.setinha:hover {
+  color: #eaeaec;
+}
+
+.menu {
+  width: 100%;
+  height: 100%;
+  background-color: #eaeaec;
+  margin-top: 1vh;
+}
+
+.opcoes {
+  display: flex;
+  flex-direction: column;
+  height: 50vh;
+  width: 100%;
+}
+
+.opcoes b {
+  font-size: 200%;
+  margin-left: 2vw;
+  margin-bottom: 8vh;
+}
+
+.caixas {
+  display: flex;
+  flex-direction: row;
+  height: 20vh;
+  width: fit-content;
+  align-items: center;
+  transition: all 1s ease-in-out;
+}
+
+.setas {
+  z-index: 1;
+  position: static;
+  height: 10vh;
+  width: 2.5vw;
+  color: #342c82;
+}
+
+.setasesquedadireita{
+  cursor: pointer;
+  position: absolute;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.setaesquerda {
+  margin-left: 1vw;
+}
+
+.setadireita {
+  margin-right: 1vw;
+}
+
+.lugares {
+  height: 30vh;
+  width: 21.2vw;
+  margin-left: 0.75vw;
+  border-radius: 50px;
+  background-color: #afc8df;
+  transition: all 0.5s ease-in-out;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  color: white;
+}
+
+.texto-museu:hover {
+  text-decoration: underline;
+}
+
+.texto-catedral:hover {
+  text-decoration: underline;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  margin-top: 5vh;
+  height: 25%;
+  max-height: 25%;
+  width: 100%;
+  background-color: #342c82;
+}
+
+footer .bi {
+  color: white;
+}
+
+
+.rodape {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  display:flex;
+  flex-direction: column;
+  width: 250px;
+}
+
+.links {
+  display: flex;
+  flex-direction: row;
+  justify-content:space-between;
+  margin-bottom: 15px;
+}
+
+.links a, .icons a {
+  color: white;
+  text-transform: uppercase;
+  text-decoration: none !important;
+}
+
+.icons {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-bottom: 15px;
+}
+
+.final {
+  color: white; 
+  text-transform: uppercase;
+  text-align: center;
+  font-size:12px;
+}
+
+.ponto {
+  color: white;
+}
+
+.bi-trello {
+  margin-left:15px;
+  margin-right:15px;
+}
+
+.logo {
+  display:flex;
+  justify-content: center;
+}
+
+.img-footer {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  height:30px;
+}
+
+.pontinho {
+  color: white;
+  font-weight: bold;
+}
+
+.rodape {
+  display:flex;
+  flex-direction: column;
+}
+
+.links {
+  display: flex;
+  flex-direction: row;
+  justify-content:space-between;
+  align-content: center;
+}
+
+.links a, .icons a {
+  color: white;
+  text-transform: uppercase;
+  text-decoration: none !important;
+}
+
+.icons {
+  align-content: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+
+}
+
+.content {
+  align-items: center;
+  padding-top: 50px;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  background-color: #f8f8f8;
+  color: #333;
+  transition: all 1s ease-in-out;
+  min-height: calc(100vh - 100px); 
+}
+
+body.dark-mode {
+  /* Defina as cores do modo noturno */
+  /* background-color: #22272e; */
+  background-color:  #22272e;
+  color: #f8f8f8;
+  transition: all 1s ease-in-out;
+}
+
+.caixacard.dark-mode{
+  background-color: #22272e;
+  color: #f8f8f8;
+  transition: all 1s ease-in-out;
+}
+
+.menu.dark-mode{
+  background-color: #22272e;
+  color: #f8f8f8;
+  transition: all 1s ease-in-out;
+}
+
+#sobre.dark-mode{
+  background-color: #22272e;
+  color: #f8f8f8;
+  transition: all 1s ease-in-out;
+}
+#about{
+  text-align: center;
+}
+
+#filtro-de-destinos {
+  margin-top: 10vh;
+  margin-left: 44%;
+}
+
+#lista-de-destinos {
+  margin-top: 2vh;
+  text-align: center;
+}

@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--SCRIPT BOOTSTRAP-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"
+        defer></script>
+    <!--CSS-->
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/museu.css">
+    <!-- SCRIPT -->
+    <script src="/js/index.js" defer></script>
+    <title>Museu Imperial</title>
+</head>
+
+<body onload="inicio()">
+    <header id="cabeca">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+            class="bi bi-list iconescabeca" id="iconeburge" viewBox="0 0 16 16">
+            <path fill-rule="evenodd"
+                d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z" />
+        </svg>
+        <img src="/assets/images/turisteclogocrop.jpeg" alt="" id="turistecimg"
+            onclick="window.location.href='/index.html'">
+
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person iconescabeca" id="iconeconta" viewBox="0 0 16 16">
+                <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0Zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4Zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10Z"/>
+              </svg>
+
+    </header>
+
+    <div id="barra-lateral">
+        <div class="caixas-barra-lateral" onclick="window.location.href='/index.html'">
+            <p>MENU</p>
+        </div>
+        <div class="caixas-barra-lateral" onclick="window.location.href='/html/fale_conosco.html'">
+            <p>FALE CONOSCO</p>
+        </div>
+        <div class="caixas-barra-lateral" onclick="window.location.href='/html/sobre.html'">
+            <p>SOBRE NÓS</p>
+        </div>
+        <div class="caixas-barra-lateral" onclick="window.location.href='/html/login.html'">
+            <p>LOGIN</p>
+        </div>
+        <div class="caixas-barra-lateral" onclick="window.location.href='/html/admin.html'">
+            <p>ADMIN</p>
+        </div>
+    </div>
+
+    <main>
+        <div class="box">
+            <h1 class="museu-titulo" onclick="window.location.href='https://museuimperial.museus.gov.br/'">MUSEU IMPERIAL DE PETRÓPOLIS</h1>
+            <div id="texto" style="height: 100px;">
+            <p>
+                O Museu Imperial de Petrópolis é um importante ponto turístico localizado na cidade de Petrópolis, no estado do Rio de Janeiro, Brasil. É considerado um dos museus mais importantes do país e um marco da história do Brasil imperial.
+
+                O museu está instalado no antigo Palácio Imperial de Petrópolis, que foi a residência de verão do imperador Dom Pedro II e sua família durante o século XIX. O palácio foi construído entre 1845 e 1862 e é uma bela construção neoclássica, rodeada por jardins bem cuidados.
+                
+                No interior do museu, os visitantes têm a oportunidade de explorar diversas salas e ambientes que foram utilizados pela família imperial. O acervo é composto por uma vasta coleção de objetos históricos, móveis, obras de arte, documentos, joias e outros artefatos que pertenceram à família imperial brasileira.
+                
+                Uma das principais atrações do Museu Imperial é a coroa de Dom Pedro II, uma das mais valiosas peças do acervo. Além disso, é possível admirar pinturas, esculturas e outras obras de arte que retratam momentos importantes da história do Brasil.
+                
+                O museu também abriga uma biblioteca com um acervo de mais de 75 mil volumes, incluindo livros raros e documentos históricos. Os visitantes podem explorar a biblioteca e ter acesso a importantes obras de literatura, história e ciências sociais.
+                
+                Além das exposições permanentes, o Museu Imperial realiza eventos temporários, palestras e atividades educativas para crianças e adultos, promovendo a disseminação do conhecimento histórico e cultural.
+                
+                Com sua arquitetura deslumbrante e seu rico acervo, o Museu Imperial de Petrópolis é um destino imperdível para os amantes da história e cultura do Brasil imperial. Proporciona uma experiência única, transportando os visitantes de volta ao período do Império brasileiro e permitindo uma compreensão mais profunda desse importante capítulo da história do país.
+            </p>    
+            </div>
+            
+            <div class="info">
+                <div class="lado-direito">
+                    <h2 class="visita">VISITAÇÃO</h2>
+                    <br>
+                    <h3>Terça à Domingo: 10h às 17h</h3>
+                    <br>
+                    <br>
+                    <h2>CONTATO</h2>
+                    <br>
+                    <h3><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-telephone" viewBox="0 0 16 16">
+                        <path d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.568 17.568 0 0 0 4.168 6.608 17.569 17.569 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.678.678 0 0 0-.58-.122l-2.19.547a1.745 1.745 0 0 1-1.657-.459L5.482 8.062a1.745 1.745 0 0 1-.46-1.657l.548-2.19a.678.678 0 0 0-.122-.58L3.654 1.328zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z"/>
+                      </svg> (24) 98176-0026</h3>
+                    <br>
+                    <h3><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-telephone" viewBox="0 0 16 16">
+                        <path d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.568 17.568 0 0 0 4.168 6.608 17.569 17.569 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.678.678 0 0 0-.58-.122l-2.19.547a1.745 1.745 0 0 1-1.657-.459L5.482 8.062a1.745 1.745 0 0 1-.46-1.657l.548-2.19a.678.678 0 0 0-.122-.58L3.654 1.328zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z"/>
+                      </svg> (61) 3521-4455</h3>
+                    <br>
+                </div>
+                <div class="lado-esquerdo">
+                    <h2>LOCALIZAÇÃO</h2>
+                    <div id="map"></div>
+                    <script>
+                        function initMap() {
+                            //LOCALIZAÇÃO
+                            const catedral = { lat: -22.507482481199585, lng: -43.1754775386311 };
+
+                            const map = new google.maps.Map(document.getElementById("map"), {
+                                zoom: 17,
+                                center: catedral,
+                            });
+                        // The marker, positioned at Uluru
+                            const marker = new google.maps.Marker({
+                                position: catedral,
+                                map: map,
+                            });
+                        }
+
+                        window.initMap = initMap;
+                        </script>
+                        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCagh3a_9tqHjK21e1-9Wb0OpK7Rn1svAA&callback=initMap&v=weekly"
+                        defer></script>
+                </div>
+            </div>
+        </div>
+        <div class ="voltarBtn">
+            <a href="/index.html">
+                VOLTAR
+            </a>   
+        </div>
+    </main>
+
+    <footer>
+        <div class="rodape">
+            <div class="logo"><img class="img-footer" src="/assets/images/logo.jpg"></div>
+
+            <div class="links">
+                <a href="/index.html">Home </a>
+                <a class="pontinho">•</a>
+                <a href="./sobre.html">Sobre </a>
+                <a class="pontinho">•</a>
+                <a href="./fale_conosco.html">Fale Conosco</a>
+            </div>
+
+            <div class="icons">
+                <a href="https://classroom.google.com/u/1/c/NjA0ODk4MzMyNzY3/a/NjA3NTA1ODUxMTMy/details"><svg
+                        xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
+                        class="bi bi-clipboard-fill" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd"
+                            d="M10 1.5a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-1Zm-5 0A1.5 1.5 0 0 1 6.5 0h3A1.5 1.5 0 0 1 11 1.5v1A1.5 1.5 0 0 1 9.5 4h-3A1.5 1.5 0 0 1 5 2.5v-1Zm-2 0h1v1A2.5 2.5 0 0 0 6.5 5h3A2.5 2.5 0 0 0 12 2.5v-1h1a2 2 0 0 1 2 2V14a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V3.5a2 2 0 0 1 2-2Z" />
+                    </svg>
+                </a>
+
+                <a href="https://trello.com/b/XO1xt620/front-end-g7">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
+                        class="bi bi-trello" viewBox="0 0 16 16">
+                        <path
+                            d="M14.1 0H1.903C.852 0 .002.85 0 1.9v12.19A1.902 1.902 0 0 0 1.902 16h12.199A1.902 1.902 0 0 0 16 14.09V1.9A1.902 1.902 0 0 0 14.1 0ZM7 11.367a.636.636 0 0 1-.64.633H3.593a.633.633 0 0 1-.63-.633V3.583c0-.348.281-.631.63-.633h2.765c.35.002.632.284.633.633L7 11.367Zm6.052-3.5a.633.633 0 0 1-.64.633h-2.78A.636.636 0 0 1 9 7.867V3.583a.636.636 0 0 1 .633-.633h2.778c.35.002.631.285.631.633l.01 4.284Z" />
+                    </svg>
+                </a>
+
+                <a href="https://github.com/RafaelCarvalho90/FrontEnd_G7">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
+                        class="bi bi-github" viewBox="0 0 16 16">
+                        <path
+                            d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z" />
+                    </svg>
+                </a>
+            </div>
+
+            <div class="final">Grupo 7 • 2023</div>
+
+        </div>
+
+    </div>
+    </footer>
+</body>
+
+</html>

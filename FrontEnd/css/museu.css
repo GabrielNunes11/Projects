@@ -1,0 +1,291 @@
+body {
+  background-image: url(/assets/images/museuimperial.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+header {
+  z-index: 1;
+  display: flex;
+  position: fixed;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  transition: all 2s ease-in-out;
+  background-color: #342c82;
+  top: 0;
+}
+
+.iconescabeca {
+  margin-left: 2%;
+  margin-right: 2%;
+  height: 80%;
+  width: 4%;
+  cursor: pointer;
+  color: #afc8df;
+  transition: transform 4s ease-in-out;
+}
+
+.iconescabeca:hover {
+  color: #eaeaec;
+}
+
+#iconeconta {
+  width: 3%;
+  transform: translate(20vw, 0);
+}
+
+#iconeburge {
+  margin-left: 1.28%;
+  transform: translate(-20vw, 0);
+}
+
+header img {
+  height: 40%;
+  transition: all 2s ease-in-out;
+  cursor: pointer;
+}
+
+.caixas-barra-lateral {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  height: 50px;
+  border: 10px;
+  border-color: #afc8df;
+  border-bottom: 50px;
+}
+
+.caixas-barra-lateral:hover {
+  background-color: #342c82;
+  color: #eaeaec;
+}
+
+#barra-lateral {
+  display: flex;
+  flex-direction: column;
+  top: 50px;
+  height: 100%;
+  width: 251px;
+  transform: translateX(-251px);
+  z-index: 1;
+  position: fixed;
+  background-image: linear-gradient(to bottom, #75a6d2, #352c8200);
+  transition: all 0.5s ease-in-out;
+}
+
+#conta-caixa {
+  height: 200px;
+  width: 300px;
+  left: 80%;
+  top: 50px;
+  display: flex;
+  flex-direction: column;
+  z-index: -1;
+  position: relative;
+  border-radius: 0px 0px 50px 50px;
+  background-color: #75a6d2;
+}
+
+.topo-conta-caixa {
+  display: flex;
+  flex-direction: row;
+  height: 30%;
+  width: 100%;
+}
+
+.topo-conta-texto {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 15px;
+}
+
+#conta-opcoes {
+  display: flex;
+  flex-direction: column;
+}
+
+.conta-opcoes-botoes {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  height: 50px;
+  cursor: pointer;
+}
+
+.conta-opcoes-botoes:hover {
+  color: #eaeaec;
+  background-color: #342c82;
+}
+
+#conta-icone {
+  height: 100%;
+  width: 15%;
+  margin-left: 3%;
+}
+
+.box {
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+  border-radius: 10px;
+  width: 45%;
+  height: 100%;
+  background: rgba(88, 88, 88, 0.4);
+  margin-top: -12vh;
+  margin-left: 5%;
+  color: white;
+}
+
+.museu-titulo {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 15px;
+  font-size: 40px;
+  text-align: center;
+  border-bottom: 2px solid white;
+  cursor: pointer;
+}
+
+#texto {
+  min-height: 350px;
+  font-size: 15pt;
+  line-height: 1.5;
+  overflow-y: scroll;
+  background: transparent;
+  border: transparent;
+  color: white;
+  scrollbar-width: thin;
+  scrollbar-color: white transparent;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+#texto::-webkit-scrollbar {
+  width: 10px;
+}
+
+#texto::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+#texto::-webkit-scrollbar-thumb {
+  background: white;
+}
+
+.info {
+  display: flex;
+  padding-top: 15px;
+  border-top: 2px solid white;
+}
+
+.lado-direito {
+  width: 50%;
+}
+
+.lado-esquerdo {
+  margin-left: 1vw;
+  width: 50%;
+}
+
+#map {
+  height: 45vh; /* The height is 400 pixels */
+  width: 100%; /* The width is the width of the web page */
+}
+
+.voltarBtn {
+  display: flex;
+  justify-content: center;
+  margin-top: 15px;
+  padding: 15px;
+  border-radius: 10px;
+  width: 100px;
+  background: rgba(88, 88, 88, 0.4);
+  margin-left: 5%;
+  color: white;
+}
+
+.voltarBtn a {
+  text-decoration: none !important;
+  color: white;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  margin-top: 15vh;
+  height: 25%;
+  width: 100%;
+  background-color: #342c82;
+}
+
+footer .bi {
+  color: white;
+}
+
+.rodape {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+  width: 250px;
+}
+
+.links {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+.links a,
+.icons a {
+  color: white;
+  text-transform: uppercase;
+  text-decoration: none !important;
+}
+
+.icons {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-bottom: 15px;
+}
+
+.final {
+  color: white;
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 12px;
+}
+
+.ponto {
+  color: white;
+}
+
+.bi-trello {
+  margin-left: 15px;
+  margin-right: 15px;
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
+}
+
+.img-footer {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  height: 30px;
+}
+
+.pontinho {
+  color: white;
+  font-weight: bold;
+}

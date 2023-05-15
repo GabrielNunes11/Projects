@@ -1,0 +1,187 @@
+:root {
+  --cor1: #342c82;
+  --cor2: #eaeaec;
+  --cor3: #afc8df;
+  --cor4: #75a6d2;
+  --cor5: #3b84c5;
+}
+
+body {
+  overflow-x: hidden;
+  overflow-y: hidden;
+  background-color: #eaeaec;
+}
+
+header {
+  z-index: 1;
+  display: flex;
+  position: fixed;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  transition: all 2s ease-in-out;
+  background-color: #342c82;
+}
+
+header a, img {
+  transition: all 2s ease-in-out;
+  cursor: pointer;
+}
+
+#link-home {
+  height: 40%;
+}
+
+.iconescabeca {
+  margin-left: 2%;
+  margin-right: 2%;
+  height: 80%;
+  width: 4%;
+  cursor: pointer;
+  color: #afc8df;
+  transition: transform 4s ease-in-out;
+}
+
+.iconescabeca:hover {
+  color: #eaeaec;
+}
+
+.iconeconta {
+  width: 3%;
+  transform: translate(20vw, 0);
+}
+
+.iconeburge {
+  margin-left: 1.28%;
+  transform: translate(-20vw, 0);
+}
+
+header img {
+  height: 40%;
+  transition: all 2s ease-in-out;
+}
+
+.container {
+  padding-top: 10vh;
+  background-color: transparent;
+  width: 100%;
+}
+
+form {
+  margin-top: 10%;
+  background-color: transparent;
+  border-radius: 10%;
+  height: 100vh;
+  max-height: 70vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  -webkit-box-shadow: 0px -4px 24px 2px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px -4px 24px 2px rgba(0, 0, 0, 0.3);
+}
+
+.form-control {
+  background-color: transparent;
+}
+
+label {
+  margin-top: 3%;
+}
+
+.form-group {
+  width: 90%;
+}
+
+.btn {
+  width: 90%;
+  margin-top: 3%;
+  background-color: #342c82;
+  border: none;
+}
+
+.btn:hover {
+  cursor: pointer;
+  background-image: linear-gradient(to right, #3b84c5, #75a6d2);
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  margin-top: 5vh;
+  height: 25%;
+  width: 100%;
+  background-color: #342c82;
+}
+
+footer .bi {
+  color: white;
+}
+
+
+.rodape {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  display:flex;
+  flex-direction: column;
+  width: 250px;
+}
+
+.links {
+  display: flex;
+  flex-direction: row;
+  justify-content:space-between;
+  margin-bottom: 15px;
+}
+
+.links a, .icons a {
+  color: white;
+  text-transform: uppercase;
+  text-decoration: none !important;
+}
+
+.icons {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-bottom: 15px;
+}
+
+.final {
+  color: white; 
+  text-transform: uppercase;
+  text-align: center;
+  font-size:12px;
+}
+
+.ponto {
+  color: white;
+}
+
+.bi-trello {
+  margin-left:15px;
+  margin-right:15px;
+}
+
+.logo {
+  display:flex;
+  justify-content: center;
+}
+
+.img-footer {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  height:30px;
+}
+
+.pontinho {
+  color: white;
+  font-weight: bold;
+}
+
+body.dark-mode{
+  background-color: #22272e;
+  color: #f8f8f8;
+  transition: all 1s ease-in-out;
+}
