@@ -28,7 +28,7 @@ Projetos criados ao longo do curso de Desenvolvimento Full Stack do Firjan/Senai
 ## About
 Projects created throughout the Full Stack Development course at Firjan/Senai with SERRATEC.
 <br></br>
-##	Purposse
+##	Purpose
 ####	I created this repository to share the projects i have been developing during the course with my colleagues.
 ##	Summary
 ####	Files contained in this repository are separated according to the name of each subject, and each file has your ReadMe for a better understanding by the visitor.
