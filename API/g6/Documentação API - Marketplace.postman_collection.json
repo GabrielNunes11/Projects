@@ -1,0 +1,3276 @@
+{
+	"info": {
+		"_postman_id": "d04489ca-4592-44e9-b6bc-a60f466514ee",
+		"name": "Documentação API - Marketplace",
+		"description": "Contact Support:\n Name: Daniel\n Email: daniel.pc.cunha@gmail.com",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "27354996"
+	},
+	"item": [
+		{
+			"name": "usuario",
+			"item": [
+				{
+					"name": "{id}",
+					"item": [
+						{
+							"name": "foto",
+							"item": [
+								{
+									"name": "Mostra Foto por id do Usuario",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJHYWJyaWVsIiwiaWF0IjoxNjg1NzI1Nzg3LCJleHAiOjE2ODU4MTIxODd9._PSbWanrAyqKNvMWqwejwYjfZJ-YCATWjxIV5uiQayxR0bsIJfNvj0U38q2HysAx",
+													"type": "string"
+												}
+											]
+										},
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "*/*"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/usuario/1/foto",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"usuario",
+												"1",
+												"foto"
+											]
+										},
+										"description": "Metodo para buscar foto de Usuarios"
+									},
+									"response": [
+										{
+											"name": "OK",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "*/*"
+													},
+													{
+														"description": "Added as a part of security scheme: bearer",
+														"key": "Authorization",
+														"value": "Bearer <token>"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/usuario/:id/foto",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"usuario",
+														":id",
+														"foto"
+													],
+													"variable": [
+														{
+															"key": "id"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "*/*"
+												}
+											],
+											"cookie": [],
+											"body": "[\n  \"<string>\",\n  \"<string>\"\n]"
+										}
+									]
+								}
+							]
+						},
+						{
+							"name": "Buscar Usuario",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{bearerToken}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/usuario/:id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"usuario",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "<integer>"
+										}
+									]
+								},
+								"description": "Método para buscar Usuario por id"
+							},
+							"response": [
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "*/*"
+											},
+											{
+												"description": "Added as a part of security scheme: bearer",
+												"key": "Authorization",
+												"value": "Bearer <token>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/usuario/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"usuario",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "*/*"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"cpf\": \"<string>\",\n  \"nasc\": \"<dateTime>\",\n  \"nome\": \"<string>\",\n  \"tipo\": \"VENDEDOR\",\n  \"id\": \"<integer>\",\n  \"endereco\": [\n    {\n      \"cep\": \"94462-786\",\n      \"numero\": \"<string>\",\n      \"id\": \"<integer>\",\n      \"logradouro\": \"<string>\",\n      \"bairro\": \"<string>\",\n      \"localidade\": \"<string>\",\n      \"uf\": \"<string>\"\n    },\n    {\n      \"cep\": \"70880-730\",\n      \"numero\": \"<string>\",\n      \"id\": \"<integer>\",\n      \"logradouro\": \"<string>\",\n      \"bairro\": \"<string>\",\n      \"localidade\": \"<string>\",\n      \"uf\": \"<string>\"\n    }\n  ],\n  \"user\": {\n    \"email\": \"<string>\",\n    \"password\": \"<string>\",\n    \"username\": \"<string>\",\n    \"id\": \"<integer>\",\n    \"roles\": [\n      {\n        \"id\": \"<integer>\",\n        \"name\": \"ROLE_ADMIN\"\n      },\n      {\n        \"id\": \"<integer>\",\n        \"name\": \"ROLE_USER\"\n      }\n    ]\n  }\n}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "lista",
+					"item": [
+						{
+							"name": "Lista Usuario",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJHYWJyaWVsIiwiaWF0IjoxNjg1NzI1Nzg3LCJleHAiOjE2ODU4MTIxODd9._PSbWanrAyqKNvMWqwejwYjfZJ-YCATWjxIV5uiQayxR0bsIJfNvj0U38q2HysAx",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/usuario/lista",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"usuario",
+										"lista"
+									]
+								},
+								"description": "Método para listar Usuarios"
+							},
+							"response": [
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "*/*"
+											},
+											{
+												"description": "Added as a part of security scheme: bearer",
+												"key": "Authorization",
+												"value": "Bearer <token>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/usuario/lista",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"usuario",
+												"lista"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "*/*"
+										}
+									],
+									"cookie": [],
+									"body": "[\n  {\n    \"cpf\": \"<string>\",\n    \"nasc\": \"<dateTime>\",\n    \"nome\": \"<string>\",\n    \"tipo\": \"VENDEDOR\",\n    \"id\": \"<integer>\",\n    \"endereco\": [\n      {\n        \"cep\": \"73326-208\",\n        \"numero\": \"<string>\",\n        \"id\": \"<integer>\",\n        \"logradouro\": \"<string>\",\n        \"bairro\": \"<string>\",\n        \"localidade\": \"<string>\",\n        \"uf\": \"<string>\"\n      },\n      {\n        \"cep\": \"33146-189\",\n        \"numero\": \"<string>\",\n        \"id\": \"<integer>\",\n        \"logradouro\": \"<string>\",\n        \"bairro\": \"<string>\",\n        \"localidade\": \"<string>\",\n        \"uf\": \"<string>\"\n      }\n    ],\n    \"user\": {\n      \"email\": \"<string>\",\n      \"password\": \"<string>\",\n      \"username\": \"<string>\",\n      \"id\": \"<integer>\",\n      \"roles\": [\n        {\n          \"id\": \"<integer>\",\n          \"name\": \"ROLE_USER\"\n        },\n        {\n          \"id\": \"<integer>\",\n          \"name\": \"ROLE_MODERATOR\"\n        }\n      ]\n    }\n  },\n  {\n    \"cpf\": \"<string>\",\n    \"nasc\": \"<dateTime>\",\n    \"nome\": \"<string>\",\n    \"tipo\": \"VENDEDOR\",\n    \"id\": \"<integer>\",\n    \"endereco\": [\n      {\n        \"cep\": \"28509-381\",\n        \"numero\": \"<string>\",\n        \"id\": \"<integer>\",\n        \"logradouro\": \"<string>\",\n        \"bairro\": \"<string>\",\n        \"localidade\": \"<string>\",\n        \"uf\": \"<string>\"\n      },\n      {\n        \"cep\": \"38082-948\",\n        \"numero\": \"<string>\",\n        \"id\": \"<integer>\",\n        \"logradouro\": \"<string>\",\n        \"bairro\": \"<string>\",\n        \"localidade\": \"<string>\",\n        \"uf\": \"<string>\"\n      }\n    ],\n    \"user\": {\n      \"email\": \"<string>\",\n      \"password\": \"<string>\",\n      \"username\": \"<string>\",\n      \"id\": \"<integer>\",\n      \"roles\": [\n        {\n          \"id\": \"<integer>\",\n          \"name\": \"ROLE_USER\"\n        },\n        {\n          \"id\": \"<integer>\",\n          \"name\": \"ROLE_ADMIN\"\n        }\n      ]\n    }\n  }\n]"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "deletar",
+					"item": [
+						{
+							"name": "{id}",
+							"item": [
+								{
+									"name": "Deleta Usuario",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJHYWJyaWVsIiwiaWF0IjoxNjg1NzI1Nzg3LCJleHAiOjE2ODU4MTIxODd9._PSbWanrAyqKNvMWqwejwYjfZJ-YCATWjxIV5uiQayxR0bsIJfNvj0U38q2HysAx",
+													"type": "string"
+												}
+											]
+										},
+										"method": "DELETE",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "*/*"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/usuario/deletar/4",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"usuario",
+												"deletar",
+												"4"
+											]
+										},
+										"description": "Metodo para deletar Usuarios"
+									},
+									"response": [
+										{
+											"name": "OK",
+											"originalRequest": {
+												"method": "DELETE",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "*/*"
+													},
+													{
+														"description": "Added as a part of security scheme: bearer",
+														"key": "Authorization",
+														"value": "Bearer <token>"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/usuario/deletar/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"usuario",
+														"deletar",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "*/*"
+												}
+											],
+											"cookie": [],
+											"body": "<string>"
+										}
+									]
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "alterar",
+					"item": [
+						{
+							"name": "{id}",
+							"item": [
+								{
+									"name": "Alterar Usuario",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{bearerToken}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "PUT",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "*/*"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"tipo\": \"CLIENTE\",\n  \"nome\": \"<string>\",\n  \"cpf\": \"<string>\",\n  \"nasc\": \"<dateTime>\",\n  \"cep\": \"<string>\",\n  \"numero\": \"<string>\",\n  \"email\": \"<string>\",\n  \"password\": \"<string>\",\n  \"role\": [\n    \"<string>\"\n  ],\n  \"url\": \"<string>\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/usuario/alterar/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"usuario",
+												"alterar",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "<integer>"
+												}
+											]
+										},
+										"description": "Método para alterar Usuario"
+									},
+									"response": [
+										{
+											"name": "OK",
+											"originalRequest": {
+												"method": "PUT",
+												"header": [
+													{
+														"key": "Content-Type",
+														"value": "application/json"
+													},
+													{
+														"key": "Accept",
+														"value": "*/*"
+													},
+													{
+														"description": "Added as a part of security scheme: bearer",
+														"key": "Authorization",
+														"value": "Bearer <token>"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"tipo\": \"CLIENTE\",\n  \"nome\": \"<string>\",\n  \"cpf\": \"<string>\",\n  \"nasc\": \"<dateTime>\",\n  \"cep\": \"<string>\",\n  \"numero\": \"<string>\",\n  \"email\": \"<string>\",\n  \"password\": \"<string>\",\n  \"role\": [\n    \"<string>\"\n  ],\n  \"url\": \"<string>\"\n}",
+													"options": {
+														"raw": {
+															"headerFamily": "json",
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/usuario/alterar/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"usuario",
+														"alterar",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "*/*"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"cpf\": \"<string>\",\n  \"nasc\": \"<dateTime>\",\n  \"nome\": \"<string>\",\n  \"tipo\": \"VENDEDOR\",\n  \"id\": \"<integer>\",\n  \"endereco\": [\n    {\n      \"cep\": \"94462-786\",\n      \"numero\": \"<string>\",\n      \"id\": \"<integer>\",\n      \"logradouro\": \"<string>\",\n      \"bairro\": \"<string>\",\n      \"localidade\": \"<string>\",\n      \"uf\": \"<string>\"\n    },\n    {\n      \"cep\": \"70880-730\",\n      \"numero\": \"<string>\",\n      \"id\": \"<integer>\",\n      \"logradouro\": \"<string>\",\n      \"bairro\": \"<string>\",\n      \"localidade\": \"<string>\",\n      \"uf\": \"<string>\"\n    }\n  ],\n  \"user\": {\n    \"email\": \"<string>\",\n    \"password\": \"<string>\",\n    \"username\": \"<string>\",\n    \"id\": \"<integer>\",\n    \"roles\": [\n      {\n        \"id\": \"<integer>\",\n        \"name\": \"ROLE_ADMIN\"\n      },\n      {\n        \"id\": \"<integer>\",\n        \"name\": \"ROLE_USER\"\n      }\n    ]\n  }\n}"
+										}
+									]
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "adicionar",
+					"item": [
+						{
+							"name": "Adicionar Usuario",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJHYWJyaWVsIiwiaWF0IjoxNjg1NzI2NzQ3LCJleHAiOjE2ODU4MTMxNDd9.1CvJuRizGjMXt4E4s08fZMob3i5_CxP9o3h3Tx0Fmyoq4ouNJgbGx2zekOa53BNJ",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "multipart/form-data"
+									},
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "foto",
+											"contentType": "image/jpeg",
+											"description": "(Required) ",
+											"type": "file",
+											"src": "/C:/Users/filip/OneDrive/Imagens/Saved Pictures/download (1).jpg"
+										},
+										{
+											"key": "usuarioDTO",
+											"value": "{\n  \"tipo\": \"CLIENTE\",\n  \"nome\": \"Ruffles\",\n  \"cpf\": \"186.268.937-79\",\n  \"nasc\": \"2000-10-12\",\n  \"cep\": \"25665-910\",\n  \"numero\": \"110\",\n  \"email\": \"rufles@gmail.com\",\n  \"password\": \"12345678\",\n  \"role\": [\n    \"user\"\n  ]\n}",
+											"contentType": "application/json",
+											"description": "(Required) ",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseUrl}}/usuario/adicionar?email=gabriellagden@gmail.com",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"usuario",
+										"adicionar"
+									],
+									"query": [
+										{
+											"key": "email",
+											"value": "gabriellagden@gmail.com",
+											"description": "(Required) "
+										}
+									]
+								},
+								"description": "Método para adicionar Usuario ao banco"
+							},
+							"response": [
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "multipart/form-data"
+											},
+											{
+												"key": "Accept",
+												"value": "*/*"
+											},
+											{
+												"description": "Added as a part of security scheme: bearer",
+												"key": "Authorization",
+												"value": "Bearer <token>"
+											}
+										],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "foto",
+													"value": "<string>",
+													"description": "(Required) ",
+													"type": "text"
+												},
+												{
+													"key": "usuarioDTO",
+													"value": "[object Object]",
+													"description": "(Required) ",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{baseUrl}}/usuario/adicionar?email=<string>",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"usuario",
+												"adicionar"
+											],
+											"query": [
+												{
+													"key": "email",
+													"value": "<string>",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "*/*"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"cpf\": \"<string>\",\n  \"nasc\": \"<dateTime>\",\n  \"nome\": \"<string>\",\n  \"tipo\": \"VENDEDOR\",\n  \"id\": \"<integer>\",\n  \"endereco\": [\n    {\n      \"cep\": \"94462-786\",\n      \"numero\": \"<string>\",\n      \"id\": \"<integer>\",\n      \"logradouro\": \"<string>\",\n      \"bairro\": \"<string>\",\n      \"localidade\": \"<string>\",\n      \"uf\": \"<string>\"\n    },\n    {\n      \"cep\": \"70880-730\",\n      \"numero\": \"<string>\",\n      \"id\": \"<integer>\",\n      \"logradouro\": \"<string>\",\n      \"bairro\": \"<string>\",\n      \"localidade\": \"<string>\",\n      \"uf\": \"<string>\"\n    }\n  ],\n  \"user\": {\n    \"email\": \"<string>\",\n    \"password\": \"<string>\",\n    \"username\": \"<string>\",\n    \"id\": \"<integer>\",\n    \"roles\": [\n      {\n        \"id\": \"<integer>\",\n        \"name\": \"ROLE_ADMIN\"\n      },\n      {\n        \"id\": \"<integer>\",\n        \"name\": \"ROLE_USER\"\n      }\n    ]\n  }\n}"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "test",
+			"item": [
+				{
+					"name": "user",
+					"item": [
+						{
+							"name": "user Access",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{bearerToken}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/test/user",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"test",
+										"user"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "*/*"
+											},
+											{
+												"description": "Added as a part of security scheme: bearer",
+												"key": "Authorization",
+												"value": "Bearer <token>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/test/user",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"test",
+												"user"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "*/*"
+										}
+									],
+									"cookie": [],
+									"body": "<string>"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "mod",
+					"item": [
+						{
+							"name": "moderator Access",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/test/mod",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"test",
+										"mod"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "*/*"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/test/mod",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"test",
+												"mod"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "*/*"
+										}
+									],
+									"cookie": [],
+									"body": "<string>"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "all",
+					"item": [
+						{
+							"name": "all Access",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/test/all",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"test",
+										"all"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "*/*"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/test/all",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"test",
+												"all"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "*/*"
+										}
+									],
+									"cookie": [],
+									"body": "<string>"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "admin",
+					"item": [
+						{
+							"name": "admin Access",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{bearerToken}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/test/admin",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"test",
+										"admin"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "*/*"
+											},
+											{
+												"description": "Added as a part of security scheme: bearer",
+												"key": "Authorization",
+												"value": "Bearer <token>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/test/admin",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"test",
+												"admin"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "*/*"
+										}
+									],
+									"cookie": [],
+									"body": "<string>"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "roles",
+			"item": [
+				{
+					"name": "save",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{bearerToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Accept",
+								"value": "*/*"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"id\": \"<integer>\",\n  \"name\": \"ROLE_USER\"\n}",
+							"options": {
+								"raw": {
+									"headerFamily": "json",
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/roles",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"roles"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "OK",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "*/*"
+									},
+									{
+										"description": "Added as a part of security scheme: bearer",
+										"key": "Authorization",
+										"value": "Bearer <token>"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"id\": \"<integer>\",\n  \"name\": \"ROLE_USER\"\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/roles",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"roles"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "*/*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"id\": \"<integer>\",\n  \"name\": \"ROLE_USER\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "produto",
+			"item": [
+				{
+					"name": "{id}",
+					"item": [
+						{
+							"name": "foto",
+							"item": [
+								{
+									"name": "Busca de Foto",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{bearerToken}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "*/*"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/produto/:id/foto",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"produto",
+												":id",
+												"foto"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "<integer>"
+												}
+											]
+										},
+										"description": "Busca por Foto cadastrada no sistema"
+									},
+									"response": [
+										{
+											"name": "OK",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "*/*"
+													},
+													{
+														"description": "Added as a part of security scheme: bearer",
+														"key": "Authorization",
+														"value": "Bearer <token>"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/produto/:id/foto",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"produto",
+														":id",
+														"foto"
+													],
+													"variable": [
+														{
+															"key": "id"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "*/*"
+												}
+											],
+											"cookie": [],
+											"body": "[\n  \"<string>\",\n  \"<string>\"\n]"
+										}
+									]
+								}
+							]
+						},
+						{
+							"name": "Busca de Produto",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{bearerToken}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/produto/:id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"produto",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "<integer>"
+										}
+									]
+								},
+								"description": "Retorna um produto de acordo com seu ID"
+							},
+							"response": [
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "*/*"
+											},
+											{
+												"description": "Added as a part of security scheme: bearer",
+												"key": "Authorization",
+												"value": "Bearer <token>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/produto/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"produto",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "*/*"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"estoque\": \"<integer>\",\n  \"nome\": \"<string>\",\n  \"preco\": \"<double>\",\n  \"id\": \"<integer>\",\n  \"categoria\": {\n    \"nome\": \"<string>\",\n    \"id\": \"<integer>\"\n  },\n  \"pedido\": {\n    \"usuario\": {\n      \"cpf\": \"<string>\",\n      \"nasc\": \"<dateTime>\",\n      \"nome\": \"<string>\",\n      \"tipo\": \"CLIENTE\",\n      \"id\": \"<integer>\",\n      \"endereco\": [\n        {\n          \"cep\": \"65004-347\",\n          \"numero\": \"<string>\",\n          \"id\": \"<integer>\",\n          \"logradouro\": \"<string>\",\n          \"bairro\": \"<string>\",\n          \"localidade\": \"<string>\",\n          \"uf\": \"<string>\"\n        },\n        {\n          \"cep\": \"89289-058\",\n          \"numero\": \"<string>\",\n          \"id\": \"<integer>\",\n          \"logradouro\": \"<string>\",\n          \"bairro\": \"<string>\",\n          \"localidade\": \"<string>\",\n          \"uf\": \"<string>\"\n        }\n      ],\n      \"user\": {\n        \"email\": \"<string>\",\n        \"password\": \"<string>\",\n        \"username\": \"<string>\",\n        \"id\": \"<integer>\",\n        \"roles\": [\n          {\n            \"id\": \"<integer>\",\n            \"name\": \"ROLE_ADMIN\"\n          },\n          {\n            \"id\": \"<integer>\",\n            \"name\": \"ROLE_MODERATOR\"\n          }\n        ]\n      }\n    },\n    \"pedId\": \"<integer>\",\n    \"dtPed\": \"<dateTime>\",\n    \"produto\": [\n      {\n        \"value\": \"<Circular reference to #/components/schemas/Produto detected>\"\n      },\n      {\n        \"value\": \"<Circular reference to #/components/schemas/Produto detected>\"\n      }\n    ]\n  }\n}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "menor",
+					"item": [
+						{
+							"name": "Busca de Produto por menor preço",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{bearerToken}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/produto/menor",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"produto",
+										"menor"
+									]
+								},
+								"description": "Retorna uma lista de produtos em ordem decrescente de valor"
+							},
+							"response": [
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "*/*"
+											},
+											{
+												"description": "Added as a part of security scheme: bearer",
+												"key": "Authorization",
+												"value": "Bearer <token>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/produto/menor",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"produto",
+												"menor"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "*/*"
+										}
+									],
+									"cookie": [],
+									"body": "[\n  {\n    \"estoque\": \"<integer>\",\n    \"nome\": \"<string>\",\n    \"preco\": \"<double>\",\n    \"id\": \"<integer>\",\n    \"categoria\": {\n      \"nome\": \"<string>\",\n      \"id\": \"<integer>\"\n    },\n    \"pedido\": {\n      \"usuario\": {\n        \"cpf\": \"<string>\",\n        \"nasc\": \"<dateTime>\",\n        \"nome\": \"<string>\",\n        \"tipo\": \"CLIENTE\",\n        \"id\": \"<integer>\",\n        \"endereco\": [\n          {\n            \"cep\": \"33090-622\",\n            \"numero\": \"<string>\",\n            \"id\": \"<integer>\",\n            \"logradouro\": \"<string>\",\n            \"bairro\": \"<string>\",\n            \"localidade\": \"<string>\",\n            \"uf\": \"<string>\"\n          },\n          {\n            \"cep\": \"91883-754\",\n            \"numero\": \"<string>\",\n            \"id\": \"<integer>\",\n            \"logradouro\": \"<string>\",\n            \"bairro\": \"<string>\",\n            \"localidade\": \"<string>\",\n            \"uf\": \"<string>\"\n          }\n        ],\n        \"user\": {\n          \"email\": \"<string>\",\n          \"password\": \"<string>\",\n          \"username\": \"<string>\",\n          \"id\": \"<integer>\",\n          \"roles\": [\n            {\n              \"id\": \"<integer>\",\n              \"name\": \"ROLE_USER\"\n            },\n            {\n              \"id\": \"<integer>\",\n              \"name\": \"ROLE_MODERATOR\"\n            }\n          ]\n        }\n      },\n      \"pedId\": \"<integer>\",\n      \"dtPed\": \"<dateTime>\",\n      \"produto\": [\n        {\n          \"value\": \"<Circular reference to #/components/schemas/Produto detected>\"\n        },\n        {\n          \"value\": \"<Circular reference to #/components/schemas/Produto detected>\"\n        }\n      ]\n    }\n  },\n  {\n    \"estoque\": \"<integer>\",\n    \"nome\": \"<string>\",\n    \"preco\": \"<double>\",\n    \"id\": \"<integer>\",\n    \"categoria\": {\n      \"nome\": \"<string>\",\n      \"id\": \"<integer>\"\n    },\n    \"pedido\": {\n      \"usuario\": {\n        \"cpf\": \"<string>\",\n        \"nasc\": \"<dateTime>\",\n        \"nome\": \"<string>\",\n        \"tipo\": \"VENDEDOR\",\n        \"id\": \"<integer>\",\n        \"endereco\": [\n          {\n            \"cep\": \"69965-529\",\n            \"numero\": \"<string>\",\n            \"id\": \"<integer>\",\n            \"logradouro\": \"<string>\",\n            \"bairro\": \"<string>\",\n            \"localidade\": \"<string>\",\n            \"uf\": \"<string>\"\n          },\n          {\n            \"cep\": \"08916-420\",\n            \"numero\": \"<string>\",\n            \"id\": \"<integer>\",\n            \"logradouro\": \"<string>\",\n            \"bairro\": \"<string>\",\n            \"localidade\": \"<string>\",\n            \"uf\": \"<string>\"\n          }\n        ],\n        \"user\": {\n          \"email\": \"<string>\",\n          \"password\": \"<string>\",\n          \"username\": \"<string>\",\n          \"id\": \"<integer>\",\n          \"roles\": [\n            {\n              \"id\": \"<integer>\",\n              \"name\": \"ROLE_ADMIN\"\n            },\n            {\n              \"id\": \"<integer>\",\n              \"name\": \"ROLE_USER\"\n            }\n          ]\n        }\n      },\n      \"pedId\": \"<integer>\",\n      \"dtPed\": \"<dateTime>\",\n      \"produto\": [\n        {\n          \"value\": \"<Circular reference to #/components/schemas/Produto detected>\"\n        },\n        {\n          \"value\": \"<Circular reference to #/components/schemas/Produto detected>\"\n        }\n      ]\n    }\n  }\n]"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "lista",
+					"item": [
+						{
+							"name": "Lista de Produtos",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{bearerToken}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/produto/lista",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"produto",
+										"lista"
+									]
+								},
+								"description": "Lista de produtos cadastrados no Banco de Dados"
+							},
+							"response": [
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "*/*"
+											},
+											{
+												"description": "Added as a part of security scheme: bearer",
+												"key": "Authorization",
+												"value": "Bearer <token>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/produto/lista",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"produto",
+												"lista"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "*/*"
+										}
+									],
+									"cookie": [],
+									"body": "[\n  {\n    \"estoque\": \"<integer>\",\n    \"nome\": \"<string>\",\n    \"preco\": \"<double>\",\n    \"id\": \"<integer>\",\n    \"categoria\": {\n      \"nome\": \"<string>\",\n      \"id\": \"<integer>\"\n    },\n    \"pedido\": {\n      \"usuario\": {\n        \"cpf\": \"<string>\",\n        \"nasc\": \"<dateTime>\",\n        \"nome\": \"<string>\",\n        \"tipo\": \"CLIENTE\",\n        \"id\": \"<integer>\",\n        \"endereco\": [\n          {\n            \"cep\": \"33090-622\",\n            \"numero\": \"<string>\",\n            \"id\": \"<integer>\",\n            \"logradouro\": \"<string>\",\n            \"bairro\": \"<string>\",\n            \"localidade\": \"<string>\",\n            \"uf\": \"<string>\"\n          },\n          {\n            \"cep\": \"91883-754\",\n            \"numero\": \"<string>\",\n            \"id\": \"<integer>\",\n            \"logradouro\": \"<string>\",\n            \"bairro\": \"<string>\",\n            \"localidade\": \"<string>\",\n            \"uf\": \"<string>\"\n          }\n        ],\n        \"user\": {\n          \"email\": \"<string>\",\n          \"password\": \"<string>\",\n          \"username\": \"<string>\",\n          \"id\": \"<integer>\",\n          \"roles\": [\n            {\n              \"id\": \"<integer>\",\n              \"name\": \"ROLE_USER\"\n            },\n            {\n              \"id\": \"<integer>\",\n              \"name\": \"ROLE_MODERATOR\"\n            }\n          ]\n        }\n      },\n      \"pedId\": \"<integer>\",\n      \"dtPed\": \"<dateTime>\",\n      \"produto\": [\n        {\n          \"value\": \"<Circular reference to #/components/schemas/Produto detected>\"\n        },\n        {\n          \"value\": \"<Circular reference to #/components/schemas/Produto detected>\"\n        }\n      ]\n    }\n  },\n  {\n    \"estoque\": \"<integer>\",\n    \"nome\": \"<string>\",\n    \"preco\": \"<double>\",\n    \"id\": \"<integer>\",\n    \"categoria\": {\n      \"nome\": \"<string>\",\n      \"id\": \"<integer>\"\n    },\n    \"pedido\": {\n      \"usuario\": {\n        \"cpf\": \"<string>\",\n        \"nasc\": \"<dateTime>\",\n        \"nome\": \"<string>\",\n        \"tipo\": \"VENDEDOR\",\n        \"id\": \"<integer>\",\n        \"endereco\": [\n          {\n            \"cep\": \"69965-529\",\n            \"numero\": \"<string>\",\n            \"id\": \"<integer>\",\n            \"logradouro\": \"<string>\",\n            \"bairro\": \"<string>\",\n            \"localidade\": \"<string>\",\n            \"uf\": \"<string>\"\n          },\n          {\n            \"cep\": \"08916-420\",\n            \"numero\": \"<string>\",\n            \"id\": \"<integer>\",\n            \"logradouro\": \"<string>\",\n            \"bairro\": \"<string>\",\n            \"localidade\": \"<string>\",\n            \"uf\": \"<string>\"\n          }\n        ],\n        \"user\": {\n          \"email\": \"<string>\",\n          \"password\": \"<string>\",\n          \"username\": \"<string>\",\n          \"id\": \"<integer>\",\n          \"roles\": [\n            {\n              \"id\": \"<integer>\",\n              \"name\": \"ROLE_ADMIN\"\n            },\n            {\n              \"id\": \"<integer>\",\n              \"name\": \"ROLE_USER\"\n            }\n          ]\n        }\n      },\n      \"pedId\": \"<integer>\",\n      \"dtPed\": \"<dateTime>\",\n      \"produto\": [\n        {\n          \"value\": \"<Circular reference to #/components/schemas/Produto detected>\"\n        },\n        {\n          \"value\": \"<Circular reference to #/components/schemas/Produto detected>\"\n        }\n      ]\n    }\n  }\n]"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "deletar",
+					"item": [
+						{
+							"name": "{id}",
+							"item": [
+								{
+									"name": "Deletar Produto",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{bearerToken}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "DELETE",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "*/*"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/produto/deletar/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"produto",
+												"deletar",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "<integer>"
+												}
+											]
+										},
+										"description": "Método para deletar produtos no banco"
+									},
+									"response": [
+										{
+											"name": "OK",
+											"originalRequest": {
+												"method": "DELETE",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "*/*"
+													},
+													{
+														"description": "Added as a part of security scheme: bearer",
+														"key": "Authorization",
+														"value": "Bearer <token>"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/produto/deletar/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"produto",
+														"deletar",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "*/*"
+												}
+											],
+											"cookie": [],
+											"body": "<string>"
+										}
+									]
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "alterar",
+					"item": [
+						{
+							"name": "{id}",
+							"item": [
+								{
+									"name": "Alterar Produto",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{bearerToken}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "PUT",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "*/*"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"nome\": \"<string>\",\n  \"categoriaId\": \"<integer>\",\n  \"preco\": \"<double>\",\n  \"estoque\": \"<integer>\",\n  \"url\": \"<string>\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/produto/alterar/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"produto",
+												"alterar",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "<integer>"
+												}
+											]
+										},
+										"description": "Método para alterar um Produto no banco"
+									},
+									"response": [
+										{
+											"name": "OK",
+											"originalRequest": {
+												"method": "PUT",
+												"header": [
+													{
+														"key": "Content-Type",
+														"value": "application/json"
+													},
+													{
+														"key": "Accept",
+														"value": "*/*"
+													},
+													{
+														"description": "Added as a part of security scheme: bearer",
+														"key": "Authorization",
+														"value": "Bearer <token>"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"nome\": \"<string>\",\n  \"categoriaId\": \"<integer>\",\n  \"preco\": \"<double>\",\n  \"estoque\": \"<integer>\",\n  \"url\": \"<string>\"\n}",
+													"options": {
+														"raw": {
+															"headerFamily": "json",
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/produto/alterar/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"produto",
+														"alterar",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "*/*"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"estoque\": \"<integer>\",\n  \"nome\": \"<string>\",\n  \"preco\": \"<double>\",\n  \"id\": \"<integer>\",\n  \"categoria\": {\n    \"nome\": \"<string>\",\n    \"id\": \"<integer>\"\n  },\n  \"pedido\": {\n    \"usuario\": {\n      \"cpf\": \"<string>\",\n      \"nasc\": \"<dateTime>\",\n      \"nome\": \"<string>\",\n      \"tipo\": \"CLIENTE\",\n      \"id\": \"<integer>\",\n      \"endereco\": [\n        {\n          \"cep\": \"65004-347\",\n          \"numero\": \"<string>\",\n          \"id\": \"<integer>\",\n          \"logradouro\": \"<string>\",\n          \"bairro\": \"<string>\",\n          \"localidade\": \"<string>\",\n          \"uf\": \"<string>\"\n        },\n        {\n          \"cep\": \"89289-058\",\n          \"numero\": \"<string>\",\n          \"id\": \"<integer>\",\n          \"logradouro\": \"<string>\",\n          \"bairro\": \"<string>\",\n          \"localidade\": \"<string>\",\n          \"uf\": \"<string>\"\n        }\n      ],\n      \"user\": {\n        \"email\": \"<string>\",\n        \"password\": \"<string>\",\n        \"username\": \"<string>\",\n        \"id\": \"<integer>\",\n        \"roles\": [\n          {\n            \"id\": \"<integer>\",\n            \"name\": \"ROLE_ADMIN\"\n          },\n          {\n            \"id\": \"<integer>\",\n            \"name\": \"ROLE_MODERATOR\"\n          }\n        ]\n      }\n    },\n    \"pedId\": \"<integer>\",\n    \"dtPed\": \"<dateTime>\",\n    \"produto\": [\n      {\n        \"value\": \"<Circular reference to #/components/schemas/Produto detected>\"\n      },\n      {\n        \"value\": \"<Circular reference to #/components/schemas/Produto detected>\"\n      }\n    ]\n  }\n}"
+										}
+									]
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "adicionar",
+					"item": [
+						{
+							"name": "Adicionar Produto",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJHYWJyaWVsIiwiaWF0IjoxNjg1NzI2OTI0LCJleHAiOjE2ODU4MTMzMjR9.97LC0zaxpHRbXr5u2YeVLmolEa_r5OQkeUFqr7_ejreTRjn_xTgwm2uWoFMUOBcm",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "multipart/form-data"
+									},
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "foto",
+											"contentType": "image/jpeg",
+											"description": "(Required) ",
+											"type": "file",
+											"src": "/C:/Users/filip/OneDrive/Imagens/Saved Pictures/download (1).jpeg"
+										},
+										{
+											"key": "produtoDTO",
+											"value": "{\n  \"nome\": \"Dolly Cola\",\n  \"categoriaId\": 1,\n  \"preco\": 4.99,\n  \"estoque\": 30,\n  \"url\": \"string\"\n}",
+											"contentType": "application/json",
+											"description": "(Required) ",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseUrl}}/produto/adicionar?email=daniel@gmail.com",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"produto",
+										"adicionar"
+									],
+									"query": [
+										{
+											"key": "email",
+											"value": "daniel@gmail.com",
+											"description": "(Required) "
+										}
+									]
+								},
+								"description": "Método para cadastrar Produto no banco"
+							},
+							"response": [
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "multipart/form-data"
+											},
+											{
+												"key": "Accept",
+												"value": "*/*"
+											},
+											{
+												"description": "Added as a part of security scheme: bearer",
+												"key": "Authorization",
+												"value": "Bearer <token>"
+											}
+										],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "foto",
+													"value": "<string>",
+													"description": "(Required) ",
+													"type": "text"
+												},
+												{
+													"key": "produtoDTO",
+													"value": "[object Object]",
+													"description": "(Required) ",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{baseUrl}}/produto/adicionar?email=<string>",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"produto",
+												"adicionar"
+											],
+											"query": [
+												{
+													"key": "email",
+													"value": "<string>",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "*/*"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"estoque\": \"<integer>\",\n  \"nome\": \"<string>\",\n  \"preco\": \"<double>\",\n  \"id\": \"<integer>\",\n  \"categoria\": {\n    \"nome\": \"<string>\",\n    \"id\": \"<integer>\"\n  },\n  \"pedido\": {\n    \"usuario\": {\n      \"cpf\": \"<string>\",\n      \"nasc\": \"<dateTime>\",\n      \"nome\": \"<string>\",\n      \"tipo\": \"CLIENTE\",\n      \"id\": \"<integer>\",\n      \"endereco\": [\n        {\n          \"cep\": \"65004-347\",\n          \"numero\": \"<string>\",\n          \"id\": \"<integer>\",\n          \"logradouro\": \"<string>\",\n          \"bairro\": \"<string>\",\n          \"localidade\": \"<string>\",\n          \"uf\": \"<string>\"\n        },\n        {\n          \"cep\": \"89289-058\",\n          \"numero\": \"<string>\",\n          \"id\": \"<integer>\",\n          \"logradouro\": \"<string>\",\n          \"bairro\": \"<string>\",\n          \"localidade\": \"<string>\",\n          \"uf\": \"<string>\"\n        }\n      ],\n      \"user\": {\n        \"email\": \"<string>\",\n        \"password\": \"<string>\",\n        \"username\": \"<string>\",\n        \"id\": \"<integer>\",\n        \"roles\": [\n          {\n            \"id\": \"<integer>\",\n            \"name\": \"ROLE_ADMIN\"\n          },\n          {\n            \"id\": \"<integer>\",\n            \"name\": \"ROLE_MODERATOR\"\n          }\n        ]\n      }\n    },\n    \"pedId\": \"<integer>\",\n    \"dtPed\": \"<dateTime>\",\n    \"produto\": [\n      {\n        \"value\": \"<Circular reference to #/components/schemas/Produto detected>\"\n      },\n      {\n        \"value\": \"<Circular reference to #/components/schemas/Produto detected>\"\n      }\n    ]\n  }\n}"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "pedido",
+			"item": [
+				{
+					"name": "{id}",
+					"item": [
+						{
+							"name": "Buscar Pedido",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{bearerToken}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/pedido/:id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"pedido",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id"
+										}
+									]
+								},
+								"description": "Método para buscar um pedido individual de acordo com seu ID"
+							},
+							"response": [
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "*/*"
+											},
+											{
+												"description": "Added as a part of security scheme: bearer",
+												"key": "Authorization",
+												"value": "Bearer <token>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/pedido/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"pedido",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "*/*"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"usuario\": {\n    \"cpf\": \"<string>\",\n    \"nasc\": \"<dateTime>\",\n    \"nome\": \"<string>\",\n    \"tipo\": \"VENDEDOR\",\n    \"id\": \"<integer>\",\n    \"endereco\": [\n      {\n        \"cep\": \"35228-112\",\n        \"numero\": \"<string>\",\n        \"id\": \"<integer>\",\n        \"logradouro\": \"<string>\",\n        \"bairro\": \"<string>\",\n        \"localidade\": \"<string>\",\n        \"uf\": \"<string>\"\n      },\n      {\n        \"cep\": \"88345-688\",\n        \"numero\": \"<string>\",\n        \"id\": \"<integer>\",\n        \"logradouro\": \"<string>\",\n        \"bairro\": \"<string>\",\n        \"localidade\": \"<string>\",\n        \"uf\": \"<string>\"\n      }\n    ],\n    \"user\": {\n      \"email\": \"<string>\",\n      \"password\": \"<string>\",\n      \"username\": \"<string>\",\n      \"id\": \"<integer>\",\n      \"roles\": [\n        {\n          \"id\": \"<integer>\",\n          \"name\": \"ROLE_USER\"\n        },\n        {\n          \"id\": \"<integer>\",\n          \"name\": \"ROLE_ADMIN\"\n        }\n      ]\n    }\n  },\n  \"pedId\": \"<integer>\",\n  \"dtPed\": \"<dateTime>\",\n  \"produto\": [\n    {\n      \"value\": \"<Circular reference to #/components/schemas/Produto detected>\"\n    },\n    {\n      \"value\": \"<Circular reference to #/components/schemas/Produto detected>\"\n    }\n  ]\n}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "lista",
+					"item": [
+						{
+							"name": "Lista de Pedidos",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{bearerToken}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/pedido/lista",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"pedido",
+										"lista"
+									]
+								},
+								"description": "Método para listar pedidos"
+							},
+							"response": [
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "*/*"
+											},
+											{
+												"description": "Added as a part of security scheme: bearer",
+												"key": "Authorization",
+												"value": "Bearer <token>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/pedido/lista",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"pedido",
+												"lista"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "*/*"
+										}
+									],
+									"cookie": [],
+									"body": "[\n  {\n    \"usuario\": {\n      \"cpf\": \"<string>\",\n      \"nasc\": \"<dateTime>\",\n      \"nome\": \"<string>\",\n      \"tipo\": \"VENDEDOR\",\n      \"id\": \"<integer>\",\n      \"endereco\": [\n        {\n          \"cep\": \"61405-476\",\n          \"numero\": \"<string>\",\n          \"id\": \"<integer>\",\n          \"logradouro\": \"<string>\",\n          \"bairro\": \"<string>\",\n          \"localidade\": \"<string>\",\n          \"uf\": \"<string>\"\n        },\n        {\n          \"cep\": \"35563-203\",\n          \"numero\": \"<string>\",\n          \"id\": \"<integer>\",\n          \"logradouro\": \"<string>\",\n          \"bairro\": \"<string>\",\n          \"localidade\": \"<string>\",\n          \"uf\": \"<string>\"\n        }\n      ],\n      \"user\": {\n        \"email\": \"<string>\",\n        \"password\": \"<string>\",\n        \"username\": \"<string>\",\n        \"id\": \"<integer>\",\n        \"roles\": [\n          {\n            \"id\": \"<integer>\",\n            \"name\": \"ROLE_ADMIN\"\n          },\n          {\n            \"id\": \"<integer>\",\n            \"name\": \"ROLE_MODERATOR\"\n          }\n        ]\n      }\n    },\n    \"pedId\": \"<integer>\",\n    \"dtPed\": \"<dateTime>\",\n    \"produto\": [\n      {\n        \"value\": \"<Circular reference to #/components/schemas/Produto detected>\"\n      },\n      {\n        \"value\": \"<Circular reference to #/components/schemas/Produto detected>\"\n      }\n    ]\n  },\n  {\n    \"usuario\": {\n      \"cpf\": \"<string>\",\n      \"nasc\": \"<dateTime>\",\n      \"nome\": \"<string>\",\n      \"tipo\": \"VENDEDOR\",\n      \"id\": \"<integer>\",\n      \"endereco\": [\n        {\n          \"cep\": \"23768-428\",\n          \"numero\": \"<string>\",\n          \"id\": \"<integer>\",\n          \"logradouro\": \"<string>\",\n          \"bairro\": \"<string>\",\n          \"localidade\": \"<string>\",\n          \"uf\": \"<string>\"\n        },\n        {\n          \"cep\": \"10345-936\",\n          \"numero\": \"<string>\",\n          \"id\": \"<integer>\",\n          \"logradouro\": \"<string>\",\n          \"bairro\": \"<string>\",\n          \"localidade\": \"<string>\",\n          \"uf\": \"<string>\"\n        }\n      ],\n      \"user\": {\n        \"email\": \"<string>\",\n        \"password\": \"<string>\",\n        \"username\": \"<string>\",\n        \"id\": \"<integer>\",\n        \"roles\": [\n          {\n            \"id\": \"<integer>\",\n            \"name\": \"ROLE_USER\"\n          },\n          {\n            \"id\": \"<integer>\",\n            \"name\": \"ROLE_ADMIN\"\n          }\n        ]\n      }\n    },\n    \"pedId\": \"<integer>\",\n    \"dtPed\": \"<dateTime>\",\n    \"produto\": [\n      {\n        \"value\": \"<Circular reference to #/components/schemas/Produto detected>\"\n      },\n      {\n        \"value\": \"<Circular reference to #/components/schemas/Produto detected>\"\n      }\n    ]\n  }\n]"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "deletar",
+					"item": [
+						{
+							"name": "{id}",
+							"item": [
+								{
+									"name": "Deletar Pedido",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{bearerToken}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "DELETE",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "*/*"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/pedido/deletar/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"pedido",
+												"deletar",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "<integer>"
+												}
+											]
+										},
+										"description": "Método para deletar pedido"
+									},
+									"response": [
+										{
+											"name": "OK",
+											"originalRequest": {
+												"method": "DELETE",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "*/*"
+													},
+													{
+														"description": "Added as a part of security scheme: bearer",
+														"key": "Authorization",
+														"value": "Bearer <token>"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/pedido/deletar/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"pedido",
+														"deletar",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "*/*"
+												}
+											],
+											"cookie": [],
+											"body": "<string>"
+										}
+									]
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "alterar",
+					"item": [
+						{
+							"name": "{id}",
+							"item": [
+								{
+									"name": "Alterar Pedido",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{bearerToken}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "PUT",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "*/*"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"produtoId\": [\n    \"<integer>\",\n    \"<integer>\"\n  ],\n  \"usuarioId\": \"<integer>\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/pedido/alterar/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"pedido",
+												"alterar",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "<integer>"
+												}
+											]
+										},
+										"description": "Método para alterar pedido"
+									},
+									"response": [
+										{
+											"name": "OK",
+											"originalRequest": {
+												"method": "PUT",
+												"header": [
+													{
+														"key": "Content-Type",
+														"value": "application/json"
+													},
+													{
+														"key": "Accept",
+														"value": "*/*"
+													},
+													{
+														"description": "Added as a part of security scheme: bearer",
+														"key": "Authorization",
+														"value": "Bearer <token>"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"produtoId\": [\n    \"<integer>\",\n    \"<integer>\"\n  ],\n  \"usuarioId\": \"<integer>\"\n}",
+													"options": {
+														"raw": {
+															"headerFamily": "json",
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/pedido/alterar/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"pedido",
+														"alterar",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "*/*"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"usuario\": {\n    \"cpf\": \"<string>\",\n    \"nasc\": \"<dateTime>\",\n    \"nome\": \"<string>\",\n    \"tipo\": \"VENDEDOR\",\n    \"id\": \"<integer>\",\n    \"endereco\": [\n      {\n        \"cep\": \"35228-112\",\n        \"numero\": \"<string>\",\n        \"id\": \"<integer>\",\n        \"logradouro\": \"<string>\",\n        \"bairro\": \"<string>\",\n        \"localidade\": \"<string>\",\n        \"uf\": \"<string>\"\n      },\n      {\n        \"cep\": \"88345-688\",\n        \"numero\": \"<string>\",\n        \"id\": \"<integer>\",\n        \"logradouro\": \"<string>\",\n        \"bairro\": \"<string>\",\n        \"localidade\": \"<string>\",\n        \"uf\": \"<string>\"\n      }\n    ],\n    \"user\": {\n      \"email\": \"<string>\",\n      \"password\": \"<string>\",\n      \"username\": \"<string>\",\n      \"id\": \"<integer>\",\n      \"roles\": [\n        {\n          \"id\": \"<integer>\",\n          \"name\": \"ROLE_USER\"\n        },\n        {\n          \"id\": \"<integer>\",\n          \"name\": \"ROLE_ADMIN\"\n        }\n      ]\n    }\n  },\n  \"pedId\": \"<integer>\",\n  \"dtPed\": \"<dateTime>\",\n  \"produto\": [\n    {\n      \"value\": \"<Circular reference to #/components/schemas/Produto detected>\"\n    },\n    {\n      \"value\": \"<Circular reference to #/components/schemas/Produto detected>\"\n    }\n  ]\n}"
+										}
+									]
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "adicionar",
+					"item": [
+						{
+							"name": "Adicionar Pedido",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"produtoId\": [\n    \"<integer>\",\n    \"<integer>\"\n  ],\n  \"usuarioId\": \"<integer>\"\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/pedido/adicionar",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"pedido",
+										"adicionar"
+									]
+								},
+								"description": "Método para listar Usuarios"
+							},
+							"response": [
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "*/*"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"produtoId\": [\n    \"<integer>\",\n    \"<integer>\"\n  ],\n  \"usuarioId\": \"<integer>\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/pedido/adicionar",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"pedido",
+												"adicionar"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "*/*"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"usuario\": {\n    \"cpf\": \"<string>\",\n    \"nasc\": \"<dateTime>\",\n    \"nome\": \"<string>\",\n    \"tipo\": \"VENDEDOR\",\n    \"id\": \"<integer>\",\n    \"endereco\": [\n      {\n        \"cep\": \"35228-112\",\n        \"numero\": \"<string>\",\n        \"id\": \"<integer>\",\n        \"logradouro\": \"<string>\",\n        \"bairro\": \"<string>\",\n        \"localidade\": \"<string>\",\n        \"uf\": \"<string>\"\n      },\n      {\n        \"cep\": \"88345-688\",\n        \"numero\": \"<string>\",\n        \"id\": \"<integer>\",\n        \"logradouro\": \"<string>\",\n        \"bairro\": \"<string>\",\n        \"localidade\": \"<string>\",\n        \"uf\": \"<string>\"\n      }\n    ],\n    \"user\": {\n      \"email\": \"<string>\",\n      \"password\": \"<string>\",\n      \"username\": \"<string>\",\n      \"id\": \"<integer>\",\n      \"roles\": [\n        {\n          \"id\": \"<integer>\",\n          \"name\": \"ROLE_USER\"\n        },\n        {\n          \"id\": \"<integer>\",\n          \"name\": \"ROLE_ADMIN\"\n        }\n      ]\n    }\n  },\n  \"pedId\": \"<integer>\",\n  \"dtPed\": \"<dateTime>\",\n  \"produto\": [\n    {\n      \"value\": \"<Circular reference to #/components/schemas/Produto detected>\"\n    },\n    {\n      \"value\": \"<Circular reference to #/components/schemas/Produto detected>\"\n    }\n  ]\n}"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "endereco",
+			"item": [
+				{
+					"name": "{id}",
+					"item": [
+						{
+							"name": "Busca por Endereço",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{bearerToken}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/endereco/:id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"endereco",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "<integer>"
+										}
+									]
+								},
+								"description": "Busca individual por endereço de acordo com seu ID"
+							},
+							"response": [
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "*/*"
+											},
+											{
+												"description": "Added as a part of security scheme: bearer",
+												"key": "Authorization",
+												"value": "Bearer <token>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/endereco/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"endereco",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "*/*"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"cep\": \"10635-276\",\n  \"numero\": \"<string>\",\n  \"id\": \"<integer>\",\n  \"logradouro\": \"<string>\",\n  \"bairro\": \"<string>\",\n  \"localidade\": \"<string>\",\n  \"uf\": \"<string>\"\n}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "lista",
+					"item": [
+						{
+							"name": "Lista de Endereços",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{bearerToken}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/endereco/lista",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"endereco",
+										"lista"
+									]
+								},
+								"description": "Lista de endereços cadastrados no Banco de Dados"
+							},
+							"response": [
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "*/*"
+											},
+											{
+												"description": "Added as a part of security scheme: bearer",
+												"key": "Authorization",
+												"value": "Bearer <token>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/endereco/lista",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"endereco",
+												"lista"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "*/*"
+										}
+									],
+									"cookie": [],
+									"body": "[\n  {\n    \"cep\": \"88901-765\",\n    \"numero\": \"<string>\",\n    \"id\": \"<integer>\",\n    \"logradouro\": \"<string>\",\n    \"bairro\": \"<string>\",\n    \"localidade\": \"<string>\",\n    \"uf\": \"<string>\"\n  },\n  {\n    \"cep\": \"09035-298\",\n    \"numero\": \"<string>\",\n    \"id\": \"<integer>\",\n    \"logradouro\": \"<string>\",\n    \"bairro\": \"<string>\",\n    \"localidade\": \"<string>\",\n    \"uf\": \"<string>\"\n  }\n]"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "deletar",
+					"item": [
+						{
+							"name": "{id}",
+							"item": [
+								{
+									"name": "Deletar Endereço",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{bearerToken}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "DELETE",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "*/*"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/endereco/deletar/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"endereco",
+												"deletar",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "<integer>"
+												}
+											]
+										},
+										"description": "Método para deletar um Endereço cadastrado no banco"
+									},
+									"response": [
+										{
+											"name": "OK",
+											"originalRequest": {
+												"method": "DELETE",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "*/*"
+													},
+													{
+														"description": "Added as a part of security scheme: bearer",
+														"key": "Authorization",
+														"value": "Bearer <token>"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/endereco/deletar/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"endereco",
+														"deletar",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "*/*"
+												}
+											],
+											"cookie": [],
+											"body": "<string>"
+										}
+									]
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "alterar",
+					"item": [
+						{
+							"name": "{id}",
+							"item": [
+								{
+									"name": "Alterar Endereço",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{bearerToken}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "PUT",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "*/*"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/endereco/alterar/:id?cep=<string>&numero=<string>",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"endereco",
+												"alterar",
+												":id"
+											],
+											"query": [
+												{
+													"key": "cep",
+													"value": "<string>",
+													"description": "(Required) "
+												},
+												{
+													"key": "numero",
+													"value": "<string>",
+													"description": "(Required) "
+												}
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "<integer>"
+												}
+											]
+										},
+										"description": "Método para alterar um Endereço cadastrado no banco"
+									},
+									"response": [
+										{
+											"name": "OK",
+											"originalRequest": {
+												"method": "PUT",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "*/*"
+													},
+													{
+														"description": "Added as a part of security scheme: bearer",
+														"key": "Authorization",
+														"value": "Bearer <token>"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/endereco/alterar/:id?cep=<string>&numero=<string>",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"endereco",
+														"alterar",
+														":id"
+													],
+													"query": [
+														{
+															"key": "cep",
+															"value": "<string>",
+															"description": "(Required) "
+														},
+														{
+															"key": "numero",
+															"value": "<string>",
+															"description": "(Required) "
+														}
+													],
+													"variable": [
+														{
+															"key": "id"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "*/*"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"cep\": \"10635-276\",\n  \"numero\": \"<string>\",\n  \"id\": \"<integer>\",\n  \"logradouro\": \"<string>\",\n  \"bairro\": \"<string>\",\n  \"localidade\": \"<string>\",\n  \"uf\": \"<string>\"\n}"
+										}
+									]
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "adicionar",
+					"item": [
+						{
+							"name": "Adicionar Endereço",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJHYWJyaWVsIiwiaWF0IjoxNjg1NzI3MDUzLCJleHAiOjE2ODU4MTM0NTN9.ZOGD7YLMAuK9G3YL9gzQyfoZWdscaF4NvjZDkZXoHL11MQleQnravYJtk-bk_pV1",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"cep\": \"25640-322\",\n  \"numero\": \"200\"\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/endereco/adicionar",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"endereco",
+										"adicionar"
+									]
+								},
+								"description": "Método utilizado junto ao usuárioService para adicionar Endereço"
+							},
+							"response": [
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "*/*"
+											},
+											{
+												"description": "Added as a part of security scheme: bearer",
+												"key": "Authorization",
+												"value": "Bearer <token>"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"cep\": \"<string>\",\n  \"numero\": \"<string>\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/endereco/adicionar",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"endereco",
+												"adicionar"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "*/*"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"cep\": \"10635-276\",\n  \"numero\": \"<string>\",\n  \"id\": \"<integer>\",\n  \"logradouro\": \"<string>\",\n  \"bairro\": \"<string>\",\n  \"localidade\": \"<string>\",\n  \"uf\": \"<string>\"\n}"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "categoria",
+			"item": [
+				{
+					"name": "{id}",
+					"item": [
+						{
+							"name": "Busca Categoria",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{bearerToken}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/categoria/:id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"categoria",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "<integer>"
+										}
+									]
+								},
+								"description": "Método para buscar Categoria por id"
+							},
+							"response": [
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "*/*"
+											},
+											{
+												"description": "Added as a part of security scheme: bearer",
+												"key": "Authorization",
+												"value": "Bearer <token>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/categoria/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"categoria",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "*/*"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"nome\": \"<string>\",\n  \"id\": \"<integer>\"\n}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "lista",
+					"item": [
+						{
+							"name": "Lista de Categira",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{bearerToken}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/categoria/lista",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"categoria",
+										"lista"
+									]
+								},
+								"description": "Método para listar as categorias existentes no banco"
+							},
+							"response": [
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "*/*"
+											},
+											{
+												"description": "Added as a part of security scheme: bearer",
+												"key": "Authorization",
+												"value": "Bearer <token>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/categoria/lista",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"categoria",
+												"lista"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "*/*"
+										}
+									],
+									"cookie": [],
+									"body": "[\n  {\n    \"nome\": \"<string>\",\n    \"id\": \"<integer>\"\n  },\n  {\n    \"nome\": \"<string>\",\n    \"id\": \"<integer>\"\n  }\n]"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "deletar",
+					"item": [
+						{
+							"name": "{id}",
+							"item": [
+								{
+									"name": "Deleta Produto",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{bearerToken}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "DELETE",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "*/*"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/categoria/deletar/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"categoria",
+												"deletar",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "<integer>"
+												}
+											]
+										},
+										"description": "Método para deletar categoria do banco"
+									},
+									"response": [
+										{
+											"name": "OK",
+											"originalRequest": {
+												"method": "DELETE",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "*/*"
+													},
+													{
+														"description": "Added as a part of security scheme: bearer",
+														"key": "Authorization",
+														"value": "Bearer <token>"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/categoria/deletar/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"categoria",
+														"deletar",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "*/*"
+												}
+											],
+											"cookie": [],
+											"body": "<string>"
+										}
+									]
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "alterar",
+					"item": [
+						{
+							"name": "{id}",
+							"item": [
+								{
+									"name": "Altera Categoria",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{bearerToken}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "PUT",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "*/*"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"nome\": \"<string>\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/categoria/alterar/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"categoria",
+												"alterar",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "<integer>"
+												}
+											]
+										},
+										"description": "Método para alterar categoria"
+									},
+									"response": [
+										{
+											"name": "OK",
+											"originalRequest": {
+												"method": "PUT",
+												"header": [
+													{
+														"key": "Content-Type",
+														"value": "application/json"
+													},
+													{
+														"key": "Accept",
+														"value": "*/*"
+													},
+													{
+														"description": "Added as a part of security scheme: bearer",
+														"key": "Authorization",
+														"value": "Bearer <token>"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"nome\": \"<string>\"\n}",
+													"options": {
+														"raw": {
+															"headerFamily": "json",
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/categoria/alterar/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"categoria",
+														"alterar",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "*/*"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"nome\": \"<string>\",\n  \"id\": \"<integer>\"\n}"
+										}
+									]
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "adicionar",
+					"item": [
+						{
+							"name": "Adicionar Categoria",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{bearerToken}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"nome\": \"<string>\"\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/categoria/adicionar",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"categoria",
+										"adicionar"
+									]
+								},
+								"description": "Método para adicionar Categoria no banco"
+							},
+							"response": [
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "*/*"
+											},
+											{
+												"description": "Added as a part of security scheme: bearer",
+												"key": "Authorization",
+												"value": "Bearer <token>"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"nome\": \"<string>\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/categoria/adicionar",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"categoria",
+												"adicionar"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "*/*"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"nome\": \"<string>\",\n  \"id\": \"<integer>\"\n}"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "auth",
+			"item": [
+				{
+					"name": "signin",
+					"item": [
+						{
+							"name": "authenticate User",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"password\": \"12345678\",\n  \"username\": \"Gabriel\"\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/auth/signin",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"auth",
+										"signin"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "*/*"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"password\": \"<string>\",\n  \"username\": \"<string>\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/auth/signin",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"auth",
+												"signin"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "*/*"
+										}
+									],
+									"cookie": [],
+									"body": "{}"
+								}
+							]
+						}
+					]
+				}
+			]
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "http://localhost:8080/g6"
+		}
+	]
+}
